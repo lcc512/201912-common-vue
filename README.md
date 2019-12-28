@@ -1,5 +1,8 @@
 # 201912-common-vue
 
+## 介绍
+用来测试vue项目中的功能块
+
 ## Project setup
 ```
 npm install
