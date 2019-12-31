@@ -9,7 +9,7 @@
     </div>
     <button @click="chufashijian">触发enlarge事件</button>
     <div>---插槽显示位置---</div>
-    <slot></slot>
+    <slot>这是默认显示的插槽内容，当父组件调用该组件的时候，里面没有内容，那么这个显示出来</slot>
     <div>---插槽显示位置---</div>
 
     <h2>测试表单</h2>
@@ -32,7 +32,16 @@
 
 <script>
 export default {
-  props: ['article'],
+  props: {
+    article:{
+      type:Object,
+      default:{
+        title:'loading...',
+        author:'loading...',
+        content:'loading...'
+      }
+    }
+  },
   data() {
     return {
       username: '',
